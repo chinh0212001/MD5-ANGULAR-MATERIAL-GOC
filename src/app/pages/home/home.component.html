@@ -105,3 +105,11 @@
     </div>
   </div>
 </div>
+<h1>Input : chuyen tu bos sang con </h1>
+<app-parent-input></app-parent-input>
+<h1>Output: chuyen tu con sang bo</h1>
+<app-output-parent></app-output-parent>
+<h1>Upload singer Avatar</h1>
+<app-singer-avatar (urlFormFirebase)="uploadAvatar($event)"></app-singer-avatar>
+<h1>upload Multiple</h1>
+<app-multilple-avatar (arrUrl)="UploadMultiple($event)"></app-multilple-avatar>

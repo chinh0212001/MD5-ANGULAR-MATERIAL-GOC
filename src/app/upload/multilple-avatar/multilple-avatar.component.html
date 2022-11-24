@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12" style="margin-top: 20px">
+            <mat-card style="margin: 50px">
+                <mat-progress-bar *ngIf="check"></mat-progress-bar>
+                <input type="file" (change)="multiple($event)" multiple>
+                <button *ngIf="arrUrlFormFirebase.length?!selectFile:selectFile" (click)="upload()" mat-stroked-button color="primary" class="mat-button-toggle-group btn-outline-danger">Upload
+                    <mat-icon color="accent" matSuffix>upload_file</mat-icon>
+                </button>
+                <div class="row">
+                    <div class="column" *ngFor="let item of arrUrlFormFirebase">
+                       <div class="card">
+                           <img src="{{item}}" alt="">
+                       </div>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>
